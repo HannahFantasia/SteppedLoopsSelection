@@ -40,7 +40,6 @@ class SteppedLoopsOperator(bpy.types.Operator):
         )
     
     def execute(self, context):
-        import bpy
         bpy.ops.mesh.loop_multi_select(ring=True)
         bpy.ops.mesh.select_nth(skip= self.deselect, nth= self.select, offset= self.offset)
         bpy.ops.mesh.loop_multi_select(ring=False)
